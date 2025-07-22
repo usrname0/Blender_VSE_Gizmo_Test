@@ -29,17 +29,17 @@ Anthropic's Claude is smarter than me so I will paste his summary of our scienti
   
   ❌ Tool Activation Test: FAILED
 
-  Tool class found: None
-  ✓ Tool activation command sent
-  ✓ Re-ensured gizmo group after tool activation
-  ZERO poll calls - Even with tool activation, no gizmo system response.
+  - Tool class found: None
+  - ✓ Tool activation command sent
+  - ✓ Re-ensured gizmo group after tool activation
+  - ZERO poll calls - Even with tool activation, no gizmo system response.
 
   ❌ Target Properties Test: FAILED
 
-  ✓ Registered target properties test gizmos
-  ✓ Enabled gizmo settings
-  ✓ Ensured target properties gizmo group
-  ZERO poll calls - Even with proper target property binding, complete silence.
+  - ✓ Registered target properties test gizmos
+  - ✓ Enabled gizmo settings
+  - ✓ Ensured target properties gizmo group
+  - ZERO poll calls - Even with proper target property binding, complete silence.
 
   🎯 FINAL SCIENTIFIC VERDICT: CONFIRMED
 
