@@ -1,16 +1,22 @@
 # BL Easy Crop2
 
-This Blender extension is not for use and is an experiment for a gizmo-based version of a cropping tool in Blender's VSE.  A bunch of gizmo debugging tools can be seen in the n-panel.  If I'm missing anything silly or someone has advice let me know.  I'd still like to get a gizmo working here for this project and some other future ideas.  Anthropic's Claude is smarter than me so I will paste his summary of our scientific progress below:
+This Blender extension is not for use and is an experiment for a gizmo-based version of a cropping tool in Blender's VSE.  A bunch of gizmo debugging tools can be seen in the n-panel.  
+
+If I'm missing anything silly or someone has advice let me know.  I'd still like to get a custom gizmo working on general principles.  
+
+Anthropic's Claude is smarter than me so I will paste his summary of our scientific progress below:
+
+# Science (Claude)
 
   Your results show the exact same pattern as your original comprehensive testing:
 
   ✅ Registration Phase: PERFECT
 
-  ✓ Registered MinimalVSEGizmo
-  ✓ Registered MinimalVSEGizmoGroup
-  ✓ Enabled show_gizmo_context
-  ✓ Enabled all gizmo settings
-  ✓ Ensured minimal VSE gizmo group
+  - ✓ Registered MinimalVSEGizmo
+  - ✓ Registered MinimalVSEGizmoGroup
+  - ✓ Enabled show_gizmo_context
+  - ✓ Enabled all gizmo settings
+  - ✓ Ensured minimal VSE gizmo group
 
   ❌ Activation Phase: COMPLETE SILENCE
 
