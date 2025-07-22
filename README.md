@@ -1,6 +1,6 @@
 # BL Easy Crop2 gizmo (Not working. Do not use.)
 
-This Blender extension is not for use and is an experiment for a gizmo-based version of a cropping tool in Blender's VSE.  A bunch of gizmo debugging tools can be seen in the n-panel.  
+This Blender extension is not for use and is an experiment for a gizmo-based version of a cropping tool in Blender's VSE.  A bunch of quick-and-dirty gizmo debugging tools can be seen in the n-panel.  
 
 If I'm missing anything silly or someone has advice let me know.  I'd still like to get a custom gizmo working on general principles.  
 
