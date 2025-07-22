@@ -1,0 +1,101 @@
+# blender_manifest.toml
+# Manifest file for the BL Easy Crop v2.0.0 Extension (Experimental)
+
+# Blender Extension Manifest
+schema_version = "1.0.0"
+id = "BL_EasyCrop_v2"
+version = "2.0.0"
+
+name = "BL Easy Crop v2.0 (Experimental)"
+tagline = "Experimental gizmo-based cropping for Blender VSE - Foundation for Free Transform"
+type = "add-on"
+
+# Author and maintainer info
+author = "usrname0"
+maintainer = "usrname0"
+
+# Links
+website = "https://github.com/usrname0/BL_EasyCrop"
+
+# Tags for discoverability
+tags = ["Sequencer", "User Interface", "Experimental"]
+
+# Requirements
+blender_version_min = "4.2.0"
+
+# License - must be GPL compatible
+license = ["SPDX:GPL-3.0-or-later"]
+
+# Description - must be clear about experimental nature
+description = """⚠️ EXPERIMENTAL VERSION 2.0.0 ⚠️
+
+An experimental rewrite of BL Easy Crop using Blender's gizmo system instead of modal operators. This version serves as a foundation for a future "Free Transform" extension.
+
+🔬 What's Different:
+• Uses Blender's gizmo system (like native transform tools)
+• Experimental implementation that may not work as expected
+• Foundation for future advanced transform features
+• Extensive debug tools for development
+
+🎯 Purpose:
+• Learning exercise for gizmo system
+• Foundation for Free Transform extension
+• Alternative approach to crop interaction
+• Research into sequence editor gizmo capabilities
+
+⚙️ Features:
+• Gizmo-based crop handles (experimental)
+• Debug panel with testing tools
+• Coordinate transformation utilities
+• Tool system integration
+• Fallback to v1.0 modal approach
+
+🚨 Important Notes:
+• This is EXPERIMENTAL software
+• Gizmo system is poorly documented
+• May not work reliably
+• Install alongside v1.0 for fallback
+• Uses X key (not C) to avoid conflicts
+• Requires Blender 4.2+ for best gizmo support
+
+💡 For Production Use:
+Install the stable v1.1.0 version instead. This v2.0.0 is for developers and experimenters only.
+
+🔧 Debug Features:
+• Gizmo registration checker
+• Coordinate transformation testing
+• Test strip creation
+• Matrix calculation verification
+• Poll condition debugging
+"""
+
+# Copyright notices
+copyright = [
+    "2025 usrname0",
+    "2007 Original VSE Transform Tools by kgeogeo, DoubleZ, doakey3, NathanLovato",
+]
+
+# Build configuration
+[build]
+paths_exclude_pattern = [
+    "__pycache__/",
+    "*.pyc", 
+    ".*",
+    "/.git/",
+    "/.gitignore",
+    "/.github/",
+    "/icons/",
+    "/docs/", 
+    "/tests/",
+    "/README.md",
+    "/DEVELOPMENT.md",
+    "/*.zip",
+    "/.vscode/",
+    "/examples/",
+    "/v1.0/",
+    "*_v1.py",
+]
+
+# Permissions - gizmos may need additional access
+[permissions]
+files = "Import/export data from the file system"
