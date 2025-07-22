@@ -29,6 +29,7 @@ MANIFEST
 # misc
 icons/
 *.zip
+.claude
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
