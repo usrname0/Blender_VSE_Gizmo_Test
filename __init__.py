@@ -34,6 +34,14 @@ try:
         register_gizmo_classes,
         unregister_gizmo_classes
     )
+    from .gizmos.test_3d_gizmo import (
+        register_3d_test_gizmo,
+        unregister_3d_test_gizmo
+    )
+    from .gizmos.test_3d_panel import (
+        register_test_panel,
+        unregister_test_panel
+    )
     from .operators.crop_operators_v2 import (
         EASYCROP_OT_crop_v2,
         EASYCROP_OT_activate_tool_v2,
@@ -56,6 +64,14 @@ except ImportError as e:
     def register_gizmo_classes():
         return False  # Match the real function's return type
     def unregister_gizmo_classes():
+        pass  # Match the real function (returns None)
+    def register_3d_test_gizmo():
+        return False  # Match the real function's return type
+    def unregister_3d_test_gizmo():
+        pass  # Match the real function (returns None)
+    def register_test_panel():
+        return False  # Match the real function's return type
+    def unregister_test_panel():
         pass  # Match the real function (returns None)
     def register_debug_classes():
         pass  # Match the real function (returns None)
@@ -238,6 +254,20 @@ def register():
             print("BL Easy Crop v2.0.0: Registered debug tools")
         except Exception as e:
             print(f"BL Easy Crop v2.0.0: Failed to register debug tools: {e}")
+        
+        # Register 3D test gizmo for comparison
+        try:
+            register_3d_test_gizmo()
+            print("BL Easy Crop v2.0.0: Registered 3D test gizmo")
+        except Exception as e:
+            print(f"BL Easy Crop v2.0.0: Failed to register 3D test gizmo: {e}")
+        
+        # Register test panel
+        try:
+            register_test_panel()
+            print("BL Easy Crop v2.0.0: Registered test panel")
+        except Exception as e:
+            print(f"BL Easy Crop v2.0.0: Failed to register test panel: {e}")
     
     # Register keymaps for fallback functionality
     wm = bpy.context.window_manager
@@ -334,6 +364,18 @@ def unregister():
         # Unregister gizmo classes
         try:
             unregister_gizmo_classes()
+        except:
+            pass
+        
+        # Unregister test panel
+        try:
+            unregister_test_panel()
+        except:
+            pass
+        
+        # Unregister 3D test gizmo
+        try:
+            unregister_3d_test_gizmo()
         except:
             pass
     
