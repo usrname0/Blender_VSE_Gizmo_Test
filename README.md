@@ -1,6 +1,6 @@
-# BL Easy Crop2
+# BL Easy Crop 2 gizmo (Not working. Do not use.)
 
-This Blender extension is not for use and is an experiment for a gizmo-based version of a cropping tool in Blender's VSE.  A bunch of gizmo debugging tools can be seen in the n-panel.  
+This Blender extension is not for use and is an experiment for a gizmo-based version of a cropping tool in Blender's VSE.  A bunch of quick-and-dirty gizmo debugging tools can be seen in the n-panel.  
 
 If I'm missing anything silly or someone has advice let me know.  I'd still like to get a custom gizmo working on general principles.  
 
@@ -29,17 +29,17 @@ Anthropic's Claude is smarter than me so I will paste his summary of our scienti
   
   ❌ Tool Activation Test: FAILED
 
-  Tool class found: None
-  ✓ Tool activation command sent
-  ✓ Re-ensured gizmo group after tool activation
-  ZERO poll calls - Even with tool activation, no gizmo system response.
+  - Tool class found: None
+  - ✓ Tool activation command sent
+  - ✓ Re-ensured gizmo group after tool activation
+  - ZERO poll calls - Even with tool activation, no gizmo system response.
 
   ❌ Target Properties Test: FAILED
 
-  ✓ Registered target properties test gizmos
-  ✓ Enabled gizmo settings
-  ✓ Ensured target properties gizmo group
-  ZERO poll calls - Even with proper target property binding, complete silence.
+  - ✓ Registered target properties test gizmos
+  - ✓ Enabled gizmo settings
+  - ✓ Ensured target properties gizmo group
+  - ZERO poll calls - Even with proper target property binding, complete silence.
 
   🎯 FINAL SCIENTIFIC VERDICT: CONFIRMED
 
