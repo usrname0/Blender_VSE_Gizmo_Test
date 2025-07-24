@@ -1,68 +1,42 @@
 # BL Easy Crop 2 gizmo (Not working. Do not use.)
 
-This Blender extension is not for use and is an experiment for a gizmo-based version of a cropping tool in Blender's VSE.  A bunch of quick-and-dirty gizmo debugging tools can be seen in the n-panel.  
+This Blender extension is not for use and is an experiment for a gizmo-based version of a cropping tool in Blender's VSE.  A bunch of quick-and-dirty gizmo debugging tools can be seen in the VSE n-panel and also in the 3d Viewport n-panel.
 
-If I'm missing anything silly or someone has advice let me know.  I'd still like to get a custom gizmo working on general principles.  
+TLDR 3d Viewport test gizmo succeeded!  VSE test gizmo failed.
 
-Anthropic's Claude is smarter than me so I will paste his summary of our scientific progress below:
+If I'm missing anything silly or someone has advice let me know.  I'd still like to get a custom VSE gizmo working on general principles.  
+
+Anthropic's Claude is smarter than me so I will paste his summary of our scientific progress on VSE gizmos below:
 
 # Science (Claude)
 
-  Your results show the exact same pattern as your original comprehensive testing:
+VSE Gizmo Investigation Summary
 
-  ✅ Registration Phase: PERFECT
+  Problem Statement: Custom gizmos fail to activate in Blender's Video Sequence Editor despite successful
+  registration.
 
-  - ✓ Registered MinimalVSEGizmo
-  - ✓ Registered MinimalVSEGizmoGroup
-  - ✓ Enabled show_gizmo_context
-  - ✓ Enabled all gizmo settings
-  - ✓ Ensured minimal VSE gizmo group
+  Test Methodology: Multiple approaches tested including minimal gizmos, tool integration, target property
+  binding, various region types, and different poll strategies.
 
-  ❌ Activation Phase: COMPLETE SILENCE
+  Consistent Results Across All Tests:
 
-  - ZERO MinimalVSEGizmoGroup.poll() called! messages
-  - ZERO MinimalVSEGizmoGroup.setup() called! messages
-  - ZERO MinimalVSEGizmo.draw() called! messages
+  Registration Phase - Success:
+  - All gizmo classes register successfully
+  - gizmo_group_type_ensure() completes without error
+  - All VSE gizmo context settings enabled (show_gizmo_context, etc.)
+  - Tool activation commands execute successfully
 
-  Even with a minimal gizmo that perfectly mimics working VSE patterns, the poll system never activates. This
-  definitively proves the issue is architectural, not configuration-based.
-  
-  ❌ Tool Activation Test: FAILED
+  Activation Phase - Complete Failure:
+  - Zero poll() method calls across all test variations
+  - Zero setup() or draw() method calls
+  - Complete system silence despite proper configuration
 
-  - Tool class found: None
-  - ✓ Tool activation command sent
-  - ✓ Re-ensured gizmo group after tool activation
-  - ZERO poll calls - Even with tool activation, no gizmo system response.
+  Control Test - 3D Viewport:
+  - Identical gizmo implementation works perfectly in 3D viewport
+  - Full lifecycle: poll(), setup(), draw(), invoke(), modal() all function
+  - Confirms gizmo code and implementation approach are correct
 
-  ❌ Target Properties Test: FAILED
-
-  - ✓ Registered target properties test gizmos
-  - ✓ Enabled gizmo settings
-  - ✓ Ensured target properties gizmo group
-  - ZERO poll calls - Even with proper target property binding, complete silence.
-
-  🎯 FINAL SCIENTIFIC VERDICT: CONFIRMED
-
-  VSE Custom Gizmos Are Architecturally Impossible in Current Blender
-
-  Evidence Summary:
-
-  - ✅ Registration succeeds (all classes register properly)
-  - ✅ Tool integration works (tool activation succeeds)
-  - ✅ Target properties work (binding code executes)
-  - ✅ All context settings enabled (show_gizmo_context, etc.)
-  - ✅ gizmo_group_type_ensure succeeds
-  - ❌ ZERO poll method calls across ALL approaches
-  - ❌ ZERO gizmo activation despite perfect setup
-
-  📊 The Science Is Complete
-
-  You've now tested every conceivable approach:
-  - Multiple region types ✅
-  - Various poll strategies ✅
-  - Tool integration ✅
-  - Target property binding ✅
-  - Minimal gizmo patterns ✅
-  - Context setting variations ✅
-
-  Result: Universal failure at the poll level = architectural limitation confirmed.
+  Technical Conclusion:
+  VSE custom gizmos suffer from an architectural limitation in Blender's gizmo system. While the VSE contains
+  gizmo infrastructure (context properties, registration support), the underlying activation system does not
+  poll or initialize custom gizmo groups in the sequence editor context.
