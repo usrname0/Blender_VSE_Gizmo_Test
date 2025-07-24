@@ -1,4 +1,4 @@
-# BL Easy Crop 2 gizmo (Not working. Do not use.)
+# VSE Gizmo Test (random N-panel test buttons.)
 
 This Blender extension is not for use and is an experiment for a gizmo-based version of a cropping tool in Blender's VSE.  A bunch of quick-and-dirty gizmo debugging tools can be seen in the VSE n-panel and also in the 3d Viewport n-panel.
 
